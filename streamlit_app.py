@@ -8,7 +8,7 @@ df = pd.read_csv('metricas.csv')  # Si lo guardaste como CSV
 # Si usas API:
 # df = pd.read_json('URL_DE_LA_API')
 
-st.title('Visualización de Métricas de mi Aplicación Bubble')
+st.title('Dashboard Journo')
 
 # Mostrar los datos en tabla
 st.write(df)
