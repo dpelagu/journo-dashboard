@@ -1,21 +1,12 @@
-import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import streamlit as st
 
-# Cargar los datos
-df = pd.read_csv('metricas.csv')  # Si lo guardaste como CSV
-# Si usas API:
-# df = pd.read_json('URL_DE_LA_API')
+# URL pública del archivo de Google Sheets publicado como CSV
+google_sheet_url = https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5IhZlfHc4GKJiLpR3b1TUYMGkpbt5iZ91aiMzcQBLi47D4Fb8IULD_opy4gnR1mA1w9pXDsXC5Dt9/pub?output=csv'
 
-st.title('Dashboard Journo')
+# Leer el archivo CSV directamente desde la URL
+df = pd.read_csv(google_sheet_url)
 
-# Mostrar los datos en tabla
 st.write(df)
 
-# Crear gráfico con seaborn o matplotlib
-st.subheader('Gráfico de Métricas')
-fig, ax = plt.subplots()
-sns.lineplot(data=df, ax=ax)
-st.pyplot(fig)
 
